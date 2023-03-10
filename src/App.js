@@ -1,5 +1,8 @@
+import React from "react";
 import "./App.css";
 import AdviceCard from "./components/AdviceCard";
+import ReactDOM from "react-dom/client";
+import { axe } from "@axe-core/react";
 
 function App() {
   return (
@@ -10,3 +13,7 @@ function App() {
 }
 
 export default App;
+if (process.env.NODE_ENV !== "production") {
+  const axe = require("@axe-core/react");
+  axe(React, ReactDOM, 1000);
+}

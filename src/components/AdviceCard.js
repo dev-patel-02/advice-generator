@@ -15,12 +15,12 @@ function AdviceCard() {
   }, []);
   return (
     <div className="advice-card w-96 h-64 rounded-lg relative">
-      <h4
+      <h1
         style={{ color: "hsl(150, 100%, 66%)" }}
         className="text-sm text-center py-4 uppercase tracking-[.25em]"
       >
         Advice #{advice?.slip?.id}
-      </h4>
+      </h1>
       <div className="flex justify-center h-32 items-center">
         {advice?.slip?.advice ? (
           <p
@@ -32,7 +32,7 @@ function AdviceCard() {
         ) : null}
       </div>
       <div className="px-5 mb-8">
-        <img src={patternDivider} alt="devider" />
+        <img src={patternDivider} alt="devider" className="w-full h-4" />
       </div>
 
       <div className="flex justify-center items-center absolute inset-x-0 bottom-[-25px] right-50">
@@ -41,7 +41,7 @@ function AdviceCard() {
           className="neon-button rounded-full p-4"
           type=""
         >
-          <img className="neon-button rounded-[50px]" src={icon} alt="icon" />
+          <img className="neon-button rounded-[50px] w-8 h-8" src={icon} alt="icon" />
         </button>
       </div>
     </div>
